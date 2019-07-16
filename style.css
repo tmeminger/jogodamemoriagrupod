@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black{
+    background-color: black;
+}
+
+.cards {
+    display:grid;
+    grid-template-areas: 'a c'
+                         'b d';
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    grid-gap: 5px;
+}
+
+.a{
+    grid-area: a;
+} 
+
+.b{
+    grid-area: b; 
+} 
+
+.c{
+    grid-area: c;
+}
+
+.d{
+    grid-area: d;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.azul {
+    background-color: blue;
+}
