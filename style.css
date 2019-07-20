@@ -18,11 +18,13 @@ section {
 
 .cards {
     display:grid;
-    grid-template-areas: 'a c'
-                         'b d';
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
     grid-gap: 5px;
+}
+.cards img{
+    height: 200px;
+    width: 200px;
 }
 
 .a{
