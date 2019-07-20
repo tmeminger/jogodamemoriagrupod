@@ -1,6 +1,7 @@
 //criando lista com todas as 4 divs que criamos no html
 let quadradinhos = document.querySelectorAll('img');
 
+
 // Puxar posição e localização das imgs e armarzenar em um vetor
 function pegarCartas(quadradinhos){
     //criando vetor para guardarmos os nomes das imgs
@@ -14,9 +15,32 @@ function pegarCartas(quadradinhos){
 // armazendo os nomes da imgs e suas posições em uma variavel
 cartas = pegarCartas(quadradinhos);
 
-
 //imprimindo no console o vetor para verificar se o passo anterior funcionou corretamente
 console.log(cartas);
+
+// Pega um vetor e embaralha as posições dele
+function embaralhar(lista){
+    let valor;
+    let indice_aleatorio;
+    for (let i = lista.length - 1; i !== 0; i--) {
+        indice_aleatorio = Math.floor(Math.random() * i);
+        valor = lista[i];
+        lista[i] = lista[indice_aleatorio];
+        lista[indice_aleatorio] = valor;
+    }
+    // manda essa lista embaralhada para a função mandarCartas
+    mandarCartas(lista);
+}
+
+// Atualizando no html a posições das imgs de acordo com o vetor
+function mandarCartas(lista){
+    for (i = 0; i<lista.length;i++){
+        document.querySelectorAll('img')[i].src = lista[i];
+    }
+}
+
+// manda embaralhar e mandar pro html o vetor cartas
+embaralhar(cartas);
 
 
 setTimeout(function corBg(){
