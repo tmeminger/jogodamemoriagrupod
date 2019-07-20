@@ -46,9 +46,7 @@ embaralhar(cartas);
 setTimeout(function corBg(){
     //definindo o tempo de 3seg para que as cores apareçam para o user e depois as cartas se tornem pretas
     for (let qd of quadradinhos) {
-    qd.classList.remove("vermelho");
-    qd.classList.remove("azul");
-    qd.classList.add("black");
+    qd.src = ''
 }}, 3000);
 
 //FALTA - definir a função para clique
